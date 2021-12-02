@@ -1,0 +1,16 @@
+PODS:
+  - cocoapods-private-pod (0.0.1)
+
+DEPENDENCIES:
+  - cocoapods-private-pod
+
+SPEC REPOS:
+  "git@github.com:an-organization-created-for-testing/cocoapods-private-spec.git":
+    - cocoapods-private-pod
+
+SPEC CHECKSUMS:
+  cocoapods-private-pod: bb11012202f9ccc39aa733fbb3fa07a5f478db03
+
+PODFILE CHECKSUM: 560d9602f0cee3ff34446b5be4762c9c4cfaebc6
+
+COCOAPODS: 1.11.0.beta.2
