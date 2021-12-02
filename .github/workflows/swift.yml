@@ -1,0 +1,27 @@
+name: iOS App
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Credentials
+      run: |
+        git config --global credential.helper store
+        echo "https://damian-rzeszot:${{ secrets.TOKEN }}@github.com" > ~/.git-credentials
+    - name: Install pods
+      run: |
+        pod install
+    - name: Build
+      run: |
+        xcodebuild \
+          -workspace CocoapodsApp.xcworkspace \
+          -scheme CocoapodsApp \
+          clean
